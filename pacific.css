@@ -1,0 +1,229 @@
+/* Global document styles */
+* {
+    box-sizing: border-box;
+}
+body {
+	background-color: #EAEAEA;
+	color: #555555; 
+    font-family: Arial, Helvetica, sans-serif;
+}
+wrapper{
+    background-color: #90c7e3;
+    background-image: linear-gradient(to bottom, #FFFFFF, #90c7e3);
+}
+header {
+    background-color: #002171;
+    color: #FFFFFF;
+    text-align: center;
+}
+header a {
+    text-decoration: none;
+}
+header a:link {
+    color: #FFFFFF;
+}
+header a:visited {
+    color: #FFFFFF;
+}
+header a:hover {
+    color: #90c7e3;
+}
+nav {
+    text-align: center;
+    font-weight: bold;
+    padding: 0;
+    font-size: 120%;
+}
+nav li {
+    border-bottom: 1px solid #000033;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+    font-size: 1.2em;
+}
+nav a:link {
+    color: #5c7fa3;
+}
+nav a:visited {
+    color: #344873;
+}
+nav a hover {
+    color: #a52a2a;
+}
+nav a {
+    text-decoration: none;
+    transition: color 3s ease-out;
+}
+main {
+    background-color: #FFFFFF;
+    padding: 1px 20px 20px 20px;
+    display : block;
+    overflow: auto;
+}
+
+b {
+    background-color: #BBDEFB;
+}
+h1 {
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: .25em;
+}
+h2 {
+    color: #1976D2;
+    text-shadow: 1px 1px #CCCCCC;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+h3 {
+    color: #000033;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+ul {
+    list-style-image: url(marker.gif);
+}
+footer {
+    font-size: 75%;
+    font-style: italic;
+    text-align: center;
+    padding: 2em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #FFFFFF;
+}
+dt {
+    color: #002171;
+}
+.resort {
+    color: #1976D2;
+    font-weight: bold;
+}
+#contact{ 
+    font-size: 90%;
+}
+#homehero{
+    height: 300px;
+    background-image: url(coast2.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#yurthero{
+    height: 300px;
+    background-image: url(yurt.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#trailhero{
+    height: 300px;
+    background-image: url(trail.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+table {
+    border: 2px solid #3399cc;
+    border-collapse: collapse;
+}
+td, th {
+    padding: .5em;
+    border: 2px solid #3399cc;
+}
+td {
+    text-align: center;
+}
+
+.text {text-align: left;}
+tr:nth-of-type(odd) {background-color: #f5fafc;}
+
+form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+input,
+textarea {
+    margin-bottom: 0.5em;
+}
+
+video {
+    float: right;
+    margin: 1em;
+}
+
+@media (min-width: 600px) {
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+    nav li {
+        border-bottom: none
+}
+    section {
+    margin-left: 2em;
+    margin-right: 2em;
+}
+    .flow {
+    display: flex;
+    flex-direction: row;
+}
+    form {
+        width: 60%;
+        max-width: 30em;
+        display: grid;
+        grid-template-columns: 6em 1fr;
+    }
+    input[type="submit"] {
+        grid-column: 2 / 3;
+        width: 9em;
+    }
+}
+
+@media (min-width: 1024px) {
+    wrapper{
+        margin: auto;
+        width: 80%;
+        border: 1px solid #002171;
+        box-shadow: 3px 3px 3px #002171;
+    }
+    nav {
+        text-align: left;
+        padding-left: 1em;
+    }
+    @supports (display: grid) {
+        main {
+            display: grid;
+            flex-direction: column;
+            padding-top: 1em;
+        }
+        .hero {
+            grid-area: hero;
+                }
+        header {
+            grid-area: header;
+        }
+        nav {
+            grid-area: nav;
+        }
+        main {
+            grid-area: main;
+        }
+        footer {
+            grid-area: footer;
+        }
+        #wrapper {
+            display: grid;
+            grid-template-areas:
+                "header header"
+                "nav hero"
+                "nav main"
+                "nav footer"
+                / 180px 1fr;
+        }
+    }
+}
