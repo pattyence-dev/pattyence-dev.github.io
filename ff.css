@@ -78,12 +78,12 @@ nav ul {
     gap: 1em;
 }
 nav a:link {
-    color: #929f84;
+    color: #514a43;
 }
 nav a:visited {
     color: #514a43;
 }
-nav a hover {
+nav a:hover {
     color: #865c71;
 }
 nav a {
